@@ -21,6 +21,7 @@ public class UserController {
 	public userVO joinaction(@RequestBody joinDTO dto) {
 		userVO insert = new userVO(dto);
 		service.joinaction(insert);
+		System.out.println("test");
 		return insert;
 	}
 }
