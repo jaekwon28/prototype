@@ -13,6 +13,9 @@
                 <li class="nav-item">
                     <router-link class="nav-link" to="/join">회원가입</router-link>
                 </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/add">물품등록</router-link>
+                </li>
             </ul>
         </div>
     </nav>

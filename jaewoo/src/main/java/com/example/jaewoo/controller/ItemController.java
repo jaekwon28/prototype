@@ -6,21 +6,21 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.jaewoo.service.joinService;
-import com.example.jaewoo.vo.joinDTO;
-import com.example.jaewoo.vo.userVO;
+import com.example.jaewoo.service.itemaddService;
+import com.example.jaewoo.vo.itemVO;
+import com.example.jaewoo.vo.itemaddDTO;
 
 @RestController
-@RequestMapping("/api/user")
-public class UserController {
+@RequestMapping("/api/item")
+public class ItemController {
 
 	@Autowired
-	private joinService service;
+	itemaddService service;
 	
-	@PostMapping(value="/join")
-	public userVO joinaction(@RequestBody joinDTO dto) {
-		userVO insert = new userVO(dto);
-		service.joinaction(insert);
-		return insert;
+	@PostMapping(value="add")
+	public itemVO itemaddaction(@RequestBody itemaddDTO dto) {
+		itemVO add = new itemVO(dto);
+		service.itemaddaction(add);
+		return add;
 	}
 }
